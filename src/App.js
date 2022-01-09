@@ -21,14 +21,14 @@ function App() {
 
     Axios.put('https://hosein-mern.herokuapp.com/update',{newAge: newAge, id: id}).then(() => {
       setListOfFriends(listOfFriends.map((val) => {
-        return val._id == id ? { _id: id, name: val.name, age: newAge} : val;
+        return val._id === id ? { _id: id, name: val.name, age: newAge} : val;
       }))
     })
   };
 
   const deleteFriend = (id) => {
     Axios.delete(`https://hosein-mern.herokuapp.com/delete/${id}`).then(() => {setListOfFriends(listOfFriends.filter((val)=> {
-      return val._id != id;
+      return val._id !== id;
     })
     
     );
@@ -61,18 +61,19 @@ function App() {
       <div className="friendContainer">
       <div className="friend">
      
-        <h3>Name: {val.name} </h3>
-        <h3>Age: {val.age} </h3>
+     
+   
+
+        <h3 className="todo"> {val.name} </h3> 
+        <h3 className="time">Time: {val.age} </h3>
+       
         
         </div>
        
         <button onClick={()=>{updateFriend(val._id)}}>Uppdatera</button>
         <button className="removeButton"  onClick={()=>{deleteFriend(val._id)}}>X</button>
         
-      
-        
-      
-        </div>
+      </div>
      
   ); 
 

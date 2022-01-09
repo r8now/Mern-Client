@@ -1,4 +1,4 @@
-.App {
+.App{
   display: flex;
 
   height: 100vh;
@@ -10,7 +10,7 @@ body{
   padding: 0;
 }
 
- .inputs {
+ .inputs{
    height: 400px;
    width: 100%;
   display: flex;
@@ -39,12 +39,10 @@ body{
    border-radius: 10px;
    font-size: 15px;
 
-  
-
- }
+}
 
  button:hover {
-   background-color:rgb(240, 168, 61);
+  background-color:rgb(240, 168, 61);
   cursor: pointer;
  }
 
@@ -59,7 +57,10 @@ body{
   display: flex;
   flex-direction: row;
   margin: 10px;
+  justify-content: center;
+  align-items: center;
   font-family:'Curier New', Courier, monospace;
+ 
 
 }
  .friend {
@@ -69,7 +70,8 @@ body{
    color: white;
    font-family:'Curier New', Courier, monospace;
    display: flex;
-   margin: 10px;
+
+ 
 
  }
 
@@ -92,3 +94,9 @@ body{
    
  }
 
+.time{
+  color: black;
+ margin-left: 50px;
+ padding-left: 50px;
+ 
+}
